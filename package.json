@@ -47,5 +47,8 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
-  "private": true
+  "private": true,
+  "repository": "git@github.com:jvitorn/mg-mobile.git",
+  "author": "jvitorn <joaoeuno2011@gmail.com>",
+  "license": "MIT"
 }
