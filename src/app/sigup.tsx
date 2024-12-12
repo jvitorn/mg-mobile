@@ -3,8 +3,11 @@ import { View, Text, TextInput, Pressable,Image } from "react-native"
 import { AntDesign }  from '@expo/vector-icons';
 import { Link } from "expo-router"
 
+import { InputText } from "@/components/input-text"
+
 export default function Sigup() {
     const [user, setUser] = useState('');
+    const [pass, setPass] = useState('');
     const handlePress = () => {
         console.log(`Nome: ${user}`)
       };
@@ -22,16 +25,12 @@ export default function Sigup() {
                     value={user}
                     onChangeText={(text) => setUser(text)} />
 
-                    <TextInput placeholder="Digite seu email *" 
-                    className="border-b-2 border-gray-400 p-3 rounded mb-5 mt-2" 
-                    value={user}
-                    onChangeText={(text) => setUser(text)} />
+                    <TextInput placeholder="Digite seu email *" value={user} onChangeText={setUser}/>
 
-                    <TextInput placeholder="Senha *" 
-                    className="border-b-2 border-gray-400 p-3 rounded mb-5 mt-2" />
+                    <InputText placeholder="Senha *" value={pass} />
 
-                    <TextInput placeholder="Digite a senha novamente *" 
-                    className="border-b-2 border-gray-400 p-3 rounded mb-7 mt-2" />
+                    <InputText placeholder="Digite a senha novamente*" />
+    
 
                     
                 </View>
